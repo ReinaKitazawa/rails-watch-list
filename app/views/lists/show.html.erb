@@ -1,0 +1,13 @@
+<div class="container">
+
+<p><%= "You haven't saved any movies yet!" if @list.movies.empty? %></p>
+<% @list.bookmarks.each do |bookmark| %>
+<p>title: <%= bookmark.movie.title %></p>
+<p>overview: <%= bookmark.movie.overview %></p>
+<%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}, class: 'text-danger' %>
+<% end %>
+
+<div>
+<button type="button" class="btn btn-outline-secondary"><%= link_to "Create A Bookmark😎", new_list_bookmark_path(@list) %></button>
+<div>
+</div>
