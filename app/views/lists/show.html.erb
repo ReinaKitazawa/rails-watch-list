@@ -1,7 +1,6 @@
-<div class="container">
+<div class="container m-3 d-flex justify-content-center">
 
-
-
+<div>
 <p><%= "You haven't saved any movies yet!" if @list.movies.empty? %></p>
 <% @list.bookmarks.each do |bookmark| %>
 <p>title: <%= bookmark.movie.title %></p>
@@ -9,8 +8,9 @@
 <%= cl_image_tag bookmark.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}, class: 'text-danger' %>
 <% end %>
+<div>
 
-<div>
 <button type="button" class="btn btn-outline-secondary"><%= link_to "Create A Bookmark😎", new_list_bookmark_path(@list) %></button>
-<div>
+</div>
+</div>
 </div>

@@ -10,8 +10,10 @@
 <div class="container mt-3 mb-5">
 <div class="cards">
 <% @lists.each do |list|%>
-<div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+<div class="card-category" style="background-image: <%= list.photo %>">
    <%= link_to list.name, list_path(list) %>
   </div>
 <% end %>
   </div>
+
+  <%# ('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg') %>
