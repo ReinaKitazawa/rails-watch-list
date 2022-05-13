@@ -6,6 +6,7 @@
 <% @list.bookmarks.each do |bookmark| %>
 <p>title: <%= bookmark.movie.title %></p>
 <p>overview: <%= bookmark.movie.overview %></p>
+<%= cl_image_tag bookmark.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}, class: 'text-danger' %>
 <% end %>
 
