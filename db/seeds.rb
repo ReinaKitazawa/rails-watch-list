@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+Bookmark.destroy_all
 Movie.destroy_all
 
 url = 'http://tmdb.lewagon.com/movie/top_rated'
